@@ -19,7 +19,7 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  background: rgb(45, 55, 106);
+  background: rgb(111, 117, 150);
 }
 
 input::placeholder {

@@ -1,42 +1,47 @@
 
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    font-size: 14px;
-  }
-  .calculator {
-    display: inline-block;
-    margin-top: 150px;
-  }
-  .row {
-    display: flex;
-  }
-  .input-cell {
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    background: rgb(45, 55, 106);
-  }
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 14px;
+}
 
-  input::placeholder{
-    color: #fff;
-    font-size: 20px;
-    text-align: right;
-  }
-  .button-cell {
-    width: 25%;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
-.button-cell.last-column{
+.calculator {
+  display: inline-block;
+  margin-top: 150px;
+}
+
+.row {
+  display: flex;
+}
+
+.input-cell {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background: rgb(45, 55, 106);
+}
+
+input::placeholder {
+  color: #fff;
+  font-size: 20px;
+  text-align: right;
+}
+
+.button-cell {
+  width: 25%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.button-cell.last-column {
   background: rgb(255, 149, 0);
 }
 
-.zero-cell{
+.zero-cell {
   width: 50%;
 }

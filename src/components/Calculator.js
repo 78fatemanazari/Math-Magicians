@@ -1,40 +1,62 @@
-import calculate from "../logic/calculate";
+import React, { useState } from 'react';
+import calculate from '../logic/calculate';
+import Button from './Button';
+import Row from './Row';
 
 function Calculator() {
+  const [calculation, setCalculation] = useState({
+     total: null,
+     next: null,
+     operation: null 
+    });
+  const [inputValue, setInputValue] = useState('');
+
+  const handleButtonClick = (buttonName) => {
+    const newCalculation = calculate(calculation, buttonName);
+    setCalculation(newCalculation);
+    if (buttonName === 'AC') {
+      setInputValue('');
+    } else if (buttonName === '=') {
+      setInputValue(newCalculation.total || '');
+    } else {
+      setInputValue(inputValue + buttonName);
+    }
+  };
+
   return (
     <div className="calculator">
-      <div className="row">
-        <input className="input-cell" type="text" placeholder="0" />
-      </div>
-      <div className="row">
-        <button className="button-cell" type="button">AC</button>
-        <button className="button-cell" type="button">+/-</button>
-        <button className="button-cell" type="button">%</button>
-        <button className="button-cell last-column" type="button">÷</button>
-      </div>
-      <div className="row">
-        <button className="button-cell" type="button">7</button>
-        <button className="button-cell" type="button">8</button>
-        <button className="button-cell" type="button">9</button>
-        <button className="button-cell last-column" type="button">x</button>
-      </div>
-      <div className="row">
-        <button className="button-cell" type="button">4</button>
-        <button className="button-cell" type="button">5</button>
-        <button className="button-cell" type="button">6</button>
-        <button className="button-cell last-column" type="button">-</button>
-      </div>
-      <div className="row">
-        <button className="button-cell" type="button">1</button>
-        <button className="button-cell" type="button">2</button>
-        <button className="button-cell" type="button">3</button>
-        <button className="button-cell last-column" type="button">+</button>
-      </div>
-      <div className="row">
-        <button className="button-cell zero-cell" type="button">0</button>
-        <button className="button-cell" type="button">.</button>
-        <button className="button-cell last-column" type="button">=</button>
-      </div>
+      <Row>
+        <input className="input-cell" type="text" value={inputValue} readOnly />
+      </Row>
+      <Row>
+        <Button label="AC" type="button-cell" onClick={handleButtonClick} />
+        <Button label="+/-" type="button-cell" onClick={handleButtonClick} />
+        <Button label="%" type="button-cell" onClick={handleButtonClick} />
+        <Button label="÷" type="button-cell last-column" onClick={handleButtonClick} />
+      </Row>
+      <Row>
+        <Button label="7" type="button-cell" onClick={handleButtonClick} />
+        <Button label="8" type="button-cell" onClick={handleButtonClick} />
+        <Button label="9" type="button-cell" onClick={handleButtonClick} />
+        <Button label="x" type="button-cell last-column" onClick={handleButtonClick} />
+      </Row>
+      <Row>
+        <Button label="4" type="button-cell" onClick={handleButtonClick} />
+        <Button label="5" type="button-cell" onClick={handleButtonClick} />
+        <Button label="6" type="button-cell" onClick={handleButtonClick} />
+        <Button label="-" type="button-cell last-column" onClick={handleButtonClick} />
+      </Row>
+      <Row>
+        <Button label="1" type="button-cell" onClick={handleButtonClick} />
+        <Button label="2" type="button-cell" onClick={handleButtonClick} />
+        <Button label="3" type="button-cell" onClick={handleButtonClick} />
+        <Button label="+" type="button-cell last-column" onClick={handleButtonClick} />
+      </Row>
+      <Row>
+        <Button label="0" type="button-cell zero-cell" onClick={handleButtonClick} />
+        <Button label="." type="button-cell" onClick={handleButtonClick} />
+        <Button label="=" type="button-cell last-column" onClick={handleButtonClick} />
+      </Row>
     </div>
   );
 }

@@ -5,10 +5,10 @@ import Row from './Row';
 
 function Calculator() {
   const [calculation, setCalculation] = useState({
-     total: null,
-     next: null,
-     operation: null 
-    });
+    total: null,
+    next: null,
+    operation: null,
+  });
   const [inputValue, setInputValue] = useState('');
 
   const handleButtonClick = (buttonName) => {

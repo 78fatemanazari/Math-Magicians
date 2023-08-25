@@ -32,6 +32,6 @@ function Quotes() {
       )}
     </div>
   );
-};
+}
 
 export default Quotes;

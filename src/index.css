@@ -1,23 +1,22 @@
 
-
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   font-size: 14px;
 }
 
-.calculator-container{
+.calculator-container {
   display: flex;
   justify-content: space-evenly;
   margin-top: 150px;
 }
 
-.quote-container{
+.quote-container {
   margin-top: 100px;
   width: 50%;
 }
 
-.quote{
+.quote {
   font-family: cursive, sans-serif;
   font-weight: bold;
   font-size: 18px;

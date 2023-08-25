@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const Quotes = () => {
+function Quotes() {
   const apiUrl = 'https://api.api-ninjas.com/v1/quotes';
   const [quotes, setQuotes] = useState('');
   const [isLoading, setIsLoading] = useState(true);

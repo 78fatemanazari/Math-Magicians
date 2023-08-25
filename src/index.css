@@ -5,15 +5,8 @@ body {
   font-size: 14px;
 }
 
-.calculator-container {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 150px;
-}
-
 .quote-container {
   margin-top: 100px;
-  width: 50%;
 }
 
 .quote {
@@ -24,6 +17,7 @@ body {
 
 .calculator {
   display: inline-block;
+  margin-top: 100px;
 }
 
 .row {

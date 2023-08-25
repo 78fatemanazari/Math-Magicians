@@ -23,7 +23,7 @@ function Quotes() {
   }, []);
 
   return (
-    <div>
+    <div className="quote-container">
       {isLoading && <p>Loading...</p>}
       {hasError && <p>Something went wrong!</p>}
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import Button from './Button';
 import Row from './Row';
+import Quotes from './Quotes';
 
 function Calculator() {
   const [calculation, setCalculation] = useState({
@@ -24,39 +25,44 @@ function Calculator() {
   };
 
   return (
-    <div className="calculator">
-      <Row>
-        <input className="input-cell" type="text" value={inputValue} readOnly />
-      </Row>
-      <Row>
-        <Button label="AC" type="button-cell" onClick={handleButtonClick} />
-        <Button label="+/-" type="button-cell" onClick={handleButtonClick} />
-        <Button label="%" type="button-cell" onClick={handleButtonClick} />
-        <Button label="÷" type="button-cell last-column" onClick={handleButtonClick} />
-      </Row>
-      <Row>
-        <Button label="7" type="button-cell" onClick={handleButtonClick} />
-        <Button label="8" type="button-cell" onClick={handleButtonClick} />
-        <Button label="9" type="button-cell" onClick={handleButtonClick} />
-        <Button label="x" type="button-cell last-column" onClick={handleButtonClick} />
-      </Row>
-      <Row>
-        <Button label="4" type="button-cell" onClick={handleButtonClick} />
-        <Button label="5" type="button-cell" onClick={handleButtonClick} />
-        <Button label="6" type="button-cell" onClick={handleButtonClick} />
-        <Button label="-" type="button-cell last-column" onClick={handleButtonClick} />
-      </Row>
-      <Row>
-        <Button label="1" type="button-cell" onClick={handleButtonClick} />
-        <Button label="2" type="button-cell" onClick={handleButtonClick} />
-        <Button label="3" type="button-cell" onClick={handleButtonClick} />
-        <Button label="+" type="button-cell last-column" onClick={handleButtonClick} />
-      </Row>
-      <Row>
-        <Button label="0" type="button-cell zero-cell" onClick={handleButtonClick} />
-        <Button label="." type="button-cell" onClick={handleButtonClick} />
-        <Button label="=" type="button-cell last-column" onClick={handleButtonClick} />
-      </Row>
+    <div className="calculator-container">
+      <div className="quote-container">
+        <Quotes />
+      </div>
+      <div className="calculator">
+        <Row>
+          <input className="input-cell" type="text" value={inputValue} readOnly />
+        </Row>
+        <Row>
+          <Button label="AC" type="button-cell" onClick={handleButtonClick} />
+          <Button label="+/-" type="button-cell" onClick={handleButtonClick} />
+          <Button label="%" type="button-cell" onClick={handleButtonClick} />
+          <Button label="÷" type="button-cell last-column" onClick={handleButtonClick} />
+        </Row>
+        <Row>
+          <Button label="7" type="button-cell" onClick={handleButtonClick} />
+          <Button label="8" type="button-cell" onClick={handleButtonClick} />
+          <Button label="9" type="button-cell" onClick={handleButtonClick} />
+          <Button label="x" type="button-cell last-column" onClick={handleButtonClick} />
+        </Row>
+        <Row>
+          <Button label="4" type="button-cell" onClick={handleButtonClick} />
+          <Button label="5" type="button-cell" onClick={handleButtonClick} />
+          <Button label="6" type="button-cell" onClick={handleButtonClick} />
+          <Button label="-" type="button-cell last-column" onClick={handleButtonClick} />
+        </Row>
+        <Row>
+          <Button label="1" type="button-cell" onClick={handleButtonClick} />
+          <Button label="2" type="button-cell" onClick={handleButtonClick} />
+          <Button label="3" type="button-cell" onClick={handleButtonClick} />
+          <Button label="+" type="button-cell last-column" onClick={handleButtonClick} />
+        </Row>
+        <Row>
+          <Button label="0" type="button-cell zero-cell" onClick={handleButtonClick} />
+          <Button label="." type="button-cell" onClick={handleButtonClick} />
+          <Button label="=" type="button-cell last-column" onClick={handleButtonClick} />
+        </Row>
+      </div>
     </div>
   );
 }

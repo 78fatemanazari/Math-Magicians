@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Gluten:wght@900&family=Kanit:wght@700&family=Lato:wght@100&family=Lobster&display=swap');
 
 body {
   font-family: Arial, sans-serif;
@@ -5,19 +6,75 @@ body {
   font-size: 14px;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin-bottom: 50px;
+}
+
+nav {
+  margin-right: 55px;
+}
+
+nav a {
+  margin-left: 16px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.logo {
+  float: left;
+  margin-left: 20px;
+  font-size: 2.5rem;
+  font-family: 'Kanit', sans-serif;
+  color: darkorange;
+}
+
+.home-page {
+  text-align: left;
+}
+
+.welcome-text {
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 20px;
+  color: rgb(111, 117, 150);
+}
+
+.home-para {
+  margin-left: 20px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Merriweather, serif;
+  line-height: 2rem;
+}
+
 .quote-container {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .quote {
   font-family: cursive, sans-serif;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.8rem;
+  color: rgb(111, 117, 150);
+}
+
+.calc-para {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(111, 117, 150);
+  position: absolute;
+  left: 2.5%;
 }
 
 .calculator {
   display: inline-block;
-  margin-top: 100px;
+  margin-top: 70px;
+  margin-left: 65%;
 }
 
 .row {
@@ -44,8 +101,16 @@ body {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: rgb(255, 149, 0);
+}
+
 .button-cell.last-column {
   background: rgb(255, 149, 0);
+}
+
+button.last-column:hover {
+  background: rgb(111, 117, 150);
 }
 
 .zero-cell {

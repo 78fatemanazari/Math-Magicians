@@ -118,7 +118,7 @@ npm run build
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Jawad Nazari**
+👤 **Fatema Nazari**
 
 - GitHub: [@78fatemanazari](https://github.com/78fatemanazari)
 - Twitter: [@fati_nazari78](https://twitter.com/fati_nazari78?s=31)

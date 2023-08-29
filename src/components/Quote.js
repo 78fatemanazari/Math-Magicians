@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function Quotes() {
+function Quote() {
   const apiUrl = 'https://api.api-ninjas.com/v1/quotes';
   const [quotes, setQuotes] = useState('');
   const [isLoading, setIsLoading] = useState(true);
@@ -34,4 +34,4 @@ function Quotes() {
   );
 }
 
-export default Quotes;
+export default Quote;
